@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio | Mayank Saini</title>
+    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Lato", Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Headings Styling */
+        h1 {
+            font-size: 2rem;
+            color: #fff;
+            background-color: black;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #2b2b2e;
+            margin-bottom: 15px;
+            text-align: center;
+            font-style: italic;
+            font-family: Helvetica, sans-serif;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1rem;
+            color: #555;
+            text-align: justify;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .card:hover {
+            box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 10px;
+            font-size: 1.5rem;
+            color: #007bff;
+            transition: 0.3s;
+        }
+
+        .social-icons a .bi-github,
+        .bi-twitter-x {
+            color: #313030;
+        }
+
+        .social-icons a .bi-instagram {
+            color: rgb(209, 16, 61);
+        }
+
+        .social-icons a .bi-envelope-fill {
+            color: rgb(8, 8, 8);
+        }
+
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+
+        .social-icons a .bi-github:hover {
+            color: #0a0a0a;
+        }
+
+        .social-icons a .bi-twitter-x:hover {
+            color: #0a0a0a;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+
+    <!-- Portfolio Header -->
+    <h1 class="rounded fst-italic">My Portfolio</h1>
+
+
+
+    <!-- Skills Section
+    <section class="skills">
+        <h2>My Skills</h2>
+        <p>Here are some of the skills I have developed over time:</p>
+        <ul>
+            <li>Programming Languages: Java, Python, C</li>
+            <li>Web Development: HTML, CSS, JavaScript, React</li>
+            <li>AI & Data Science: Machine Learning, Data Analysis</li>
+            <li>Tools & Frameworks: Git, Node.js, Bootstrap, TensorFlow</li>
+        </ul>
+    </section> -->
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>My Projects</h2>
+
+        <div class="row ">
+
+           
+                <div class=" card col m-2">
+                    <img src="files/clash-royal-project-img.png" class="card-img-top" alt="Clash Royale Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Clash Royale Cards</h5>
+                        <p class="card-text">A web application I developed to showcase my web development skills. It
+                            allows users to explore and interact with Clash Royale cards. Built with HTML, CSS, and
+                            JavaScript.</p>
+
+                        <!-- View on GitHub Button -->
+                        <a href="https://github.com/mayanksaini18/Clash_Royal_Cards" class="btn btn-primary"
+                            target="_blank">View on GitHub</a>
+                        <br><br>
+
+                        <!-- Live Demo Link -->
+                        <a href="https://clash-royal-cards.vercel.app/" target="_blank">
+                            <p style="color: #0056b3; cursor: pointer;">View Live Demo</p>
+                        </a>
+                    </div>
+                </div>
+
+            
+           
+                <div class="card col m-2">
+                    <img src="files/music-player-project-img (1).png" class="card-img-top" alt="Music Playlist Project">
+                    <div class="card-body">
+                        <h5 class="card-title">My Music Playlist</h5>
+                        <p class="card-text">This project is a personalized music playlist web app where users can
+                            explore and enjoy my curated music collection. Built with JavaScript, HTML, and CSS for a
+                            seamless user experience.</p>
+
+                        <!-- View on GitHub Button -->
+                        <a href="https://github.com/mayanksaini18/my-playlist" class="btn btn-primary"
+                            target="_blank">View on GitHub</a>
+                        <br><br>
+
+                        <!-- Live Demo Link -->
+                        <a href="https://my-playlist-mu.vercel.app/" target="_blank">
+                            <p style="color: #0056b3; cursor: pointer;">View Live Demo</p>
+                        </a>
+                    </div>
+                </div>
+            
+
+            
+                <div class="card col m-2">
+                    <img src="files/mywebsite-project-img.png" class="card-img-top" alt="Daily Task Tracker App">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio Website</h5>
+                        <p class="card-text">A personal portfolio website built to showcase my skills, projects, and experience. Developed using HTML, CSS, and JavaScript for a clean, responsive design that highlights my work effectively.</p>
+            
+                        <!-- View on GitHub Button -->
+                        <a href="https://github.com/yourusername/project3" class="btn btn-primary" target="_blank">View on GitHub</a>
+                        <br><br>
+            
+                        <!-- Live Demo Link -->
+                        <a href="https://yourapp-link.com" target="_blank">
+                            <p style="color: #0056b3; cursor: pointer;">View Live Demo</p>
+                        </a>
+                    </div>
+                </div>
+            
+            
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to collaborate or discuss potential opportunities, feel free to reach out to me!</p>
+        <div class="social-icons">
+            <a href="https://github.com/mayanksaini18" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://x.com/_MayankSaini" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="mailto:mayanksaini@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://www.linkedin.com/in/mayank-saini-04675b333/" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/_mayanksaini_18/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+    </section>
+
+</body>
+
+</html>

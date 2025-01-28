@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Registration Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style type="text/css">
+        h2 {
+            font-size: 2rem;
+            color: #2b2b2e;
+            margin-bottom: 15px;
+            text-align: center;
+            font-style: italic;
+            font-family: Helvetica, sans-serif;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1rem;
+            color: #555;
+            text-align: justify;
+            line-height: 1.8;
+            font-style: italic
+        }
+
+        section:hover {
+            box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        input:required+span {
+            color: red;
+            font-size: 14px;
+        }
+
+        input:required~small {
+            color: red;
+            font-size: 12px;
+        }
+
+        input:required {
+            border: 1px solid red;
+        }
+
+        input:valid+span {
+
+            display: none;
+        }
+
+        input:valid~small {
+            display: none;
+        }
+
+        input:valid {
+            border: 1px solid black;
+        }
+
+        .main {
+            border: 1px solid #cccccc;
+            box-shadow:
+                #dddddd 12px 12px,
+                /* color , x offset , yoffset ,blur ,spread */
+                #ffffff 12px 12px,
+                #cccccc 12px 12px 0px 1px,
+                #dddddd 16px 16px 12px;
+
+            border-radius: 10px;
+            padding: 20px;
+            width: 500px;
+        
+
+        }
+            .social-icons a {
+                display: inline-block;
+                margin: 10px;
+                font-size: 1.5rem;
+                color: #007bff;
+                transition: 0.3s;
+            }
+
+            .social-icons a .bi-github,
+            .bi-twitter-x ,.bi-envelope-fill{
+                color: #313030;
+            }
+
+            .social-icons a .bi-instagram {
+                color: rgb(209, 16, 61);
+            }
+
+
+            .social-icons a:hover {
+                color: #0056b3;
+            }
+
+            .social-icons a .bi-github:hover {
+                color: #0a0a0a;
+            }
+
+            .social-icons a .bi-twitter-x:hover {
+                color: #0a0a0a;
+            }
+            .social-icons a .bi-envelope-fill:hover {
+                color: #0a0a0a;
+            }
+            .social-icons a .bi-instagram:hover {
+                color: #ff0606;
+            }
+
+        </style>
+</head>
+
+<body class="container-fluid d-flex flex-wrap justify-content-center align-items-center vh-100 bg-light">
+    
+    <div class="main mt-3">
+
+        <p class="fst-italic fs-3 text-center">Contact me</p>
+        <small>Feel free to reach out to me for collaborations, ideas, or just to chat! You can connect with me through
+            email or social media platforms.</small>
+
+        <form action="#" method="post">
+
+            <div class="mb-3 mt-3">
+                <label for="username" class="form-label">name:</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your name" required>
+                <span>*</span>
+                <small>Username is mandatory</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <span>*</span>
+                <small>Email is mandatory</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile Number:</label>
+                <input type="tel" class="form-control" id="mobile" pattern="^\+91\d{10}$" placeholder="+91XXXXXXXXXX"
+                required>
+                <span>*</span>
+                <small>Format: +91 followed by 10 digits</small>
+            </div>
+            
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            
+        </form> <br>
+        <div class="social-icons">
+    
+            <a href="https://github.com/mayanksaini18 " target="_blank"><i class="bi bi-github "></i></a>
+            <a href="https://x.com/_MayankSaini" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a href="mailto:mayanksaini@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+            <a href="https://www.linkedin.com/in/mayank-saini-04675b333/" target="_blank"><i
+                    class="bi bi-linkedin"></i></a>
+            <a href="https://www.instagram.com/_mayanksaini_18/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+    </div>
+
+    
+       
+        
+    
+
+</body>
+
+</html>
