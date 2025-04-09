@@ -1,317 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayank | Portfolio</title>
-     <!-- <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">  -->
-
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Lato", Arial, sans-serif;
-        }
-
-        body {
-
-            background-color: #f9f9f9;
-            color: #333;
-        }
-
-        /* Navbar */
-        .navbar {
-            font-style: italic;
-            align-items: center;
-            padding: 5px;
-            margin: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-
-        }
-
-        .navbar+h1 {
-            font-size: 1.8rem;
-            color: #333;
-        }
-
-        .navbar nav a {
-            margin: 0 15px;
-            color: #555;
-            font-size: 1rem;
-            text-decoration: none;
-        }
-
-
-
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            padding: 0 10;
-            text-align: left;
-        }
-
-
-        .hero-text {
-            max-width: 500px;
-            margin-left: 50px;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            color: #333;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #666;
-            margin: 10px 0 20px;
-        }
-
-
-
-        /* crads styling */
-
-        .card {
-            position: relative;
-            overflow: hidden;
-            width: 370px;
-            height: 370px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            padding: 20px;
-            transition: all 0.3s;
-
-
-        }
-
-        .card img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.3s;
-        }
-
-        .card p {
-            margin-top: 130px;
-            opacity: 1;
-            font-size: 15px;
-        }
-
-        .info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            background: #41404799;
-            transition: all 0.3s;
-        }
-
-        .name {
-            font-size: 20px;
-            font-weight: 600;
-            color: #f9f9f9;
-        }
-
-        .role {
-            font-size: 16px;
-            font-weight: 400;
-            color: #e9e7e7;
-        }
-
-        .card:hover img {
-            top: 20px;
-            left: 20px;
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-        }
-
-        .card:hover .info {
-            left: 50%;
-            top: 30px;
-            height: 50px;
-
-        }
-
-        .card:hover .role {
-            margin-top: 7px;
-            font-style: italic;
-            color: black;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin: 10px;
-            font-size: 1.5rem;
-            color: #007bff;
-            transition: 0.3s;
-        }
-
-        .social-icons a .bi-github,
-        .bi-twitter-x {
-            color: #313030;
-        }
-
-        .social-icons a .bi-instagram {
-            color: rgb(209, 16, 61);
-        }
-
-        .social-icons a .bi-envelope-fill {
-            color: rgb(8, 8, 8);
-        }
-
-        .social-icons a:hover {
-            color: #0056b3;
-        }
-
-        .social-icons a .bi-github:hover {
-            color: #0a0a0a;
-        }
-
-        .social-icons a .bi-twitter-x:hover {
-            color: #0a0a0a;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayank Saini | Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-
-<body class="container-fluid">
-    <!-- landing -->
-    <div class="section-1">
-
-        <header class="navbar d-flex justify-content-between rounded">
-            <h1 class="title"> &nbsp mayank..</h1>
-            <nav>
-
-                <button class=" btn btn-light">
-                    <span>
-                        <a href="about.html">About</a>
-                    </span>
-                </button>
-                <button class=" btn btn-light">
-                    <span>
-                        <a href="skills.html">Skills</a>
-                    </span>
-                </button>
-                <button class=" btn btn-light">
-                    <span>
-                        <a href="portfolio.html">Portfolio</a>
-                    </span>
-                </button>
-                <button class=" btn btn-light">
-                    <span>
-                        <a href="contact.html">Contact</a>
-                    </span>
-                </button>
-            </nav>
-        </header>
-
-        <section class="hero mt-3 d-flex flex-wrap align-items-center justify-content-center">
-            <div class="card">
-
-                <img src="files/blue-hoodie-in-room.jpg" alt="blue-hoodie-in-room">
-                <div class="info">
-                    <span class="name ">Mayank Saini</span>
-                    <span class="role">Student at PW IOI</>
-                </div>
-                <p> I’m Mayank Saini, a passionate tech student pursuing BSc in Artificial Intelligence and Data Science
-                    at IIT Patna. I love solving real-world problems through technology and mathematics. Currently
-                    honing my
-                    skills at the PW Institute of Innovation.
-
-                </p>
-            </div>
-
-            <div class="hero-text mt-3">
-                <h2>Hello There!</h2>
-                <p>AI Enthusiast | Aspiring Innovator | Problem Solver</p>
-                <div class="social-icons">
-
-                    <a href="https://www.linkedin.com/in/mayank-saini-04675b333/" target="_blank"><i
-                            class="bi bi-linkedin"></i></a>
-                    <a href="https://github.com/mayanksaini18 " target="_blank"><i class="bi bi-github "></i></a>
-                    <a href="https://x.com/_MayankSaini" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                </div>
-            </div>
-        </section>
-
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">Mayank.dev</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <style>
-        /* Section Styling */
-        .contact {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 fade-in">
+          <h1 class="display-4 fw-bold mb-4">Hello, I'm Mayank Saini</h1>
+          <h3 class="mb-4 text-secondary">AI Enthusiast | Aspiring Innovator | Problem Solver</h3>
+          <p class="lead mb-4">
+            I'm a passionate tech student pursuing BSc in Artificial Intelligence and Data Science
+            at IIT Patna. I love solving real-world problems through technology and mathematics.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#contact" class="btn btn-primary btn-lg">Get In Touch</a>
+            <a href="#portfolio" class="btn btn-outline-secondary btn-lg">View My Work</a>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0 text-center fade-in">
+          <div class="profile-card">
+            <img src="files/blue-hoodie-in-room.jpg" alt="Mayank Saini" class="img-fluid hero-img">
+            <div class="card-body bg-white p-4">
+              <h4>Mayank Saini</h4>
+              <p class="text-muted">Student at PW IOI</p>
+              <div class="social-icons mt-3">
+                <a href="https://www.linkedin.com/in/mayank-saini-04675b333/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/mayanksaini18" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://x.com/_MayankSaini" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                <a href="mailto:mayanksaini@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+                <a href="https://www.instagram.com/_mayanksaini_18/" target="_blank"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        /* Headings Styling */
-         .contact h1 {
-            font-size: 2rem;
-            color: #fff;
-            background-color: black;
-            margin-bottom: 15px;
-            text-align: center;
+  <!-- About Section -->
+  <section id="about" class="section-container bg-light">
+    <div class="container">
+      <h1 class="section-title">About Me</h1>
+      <div class="row align-items-center">
+       
+        <div class="col-lg-7 mt-4 mt-lg-0 fade-in">
+          <h2>Who I Am?</h2>
+          <p class="lead">
+            Hi, I'm Mayank Saini, a passionate tech student pursuing BSc in Artificial Intelligence and Data Science at
+            IIT Patna. I love solving real-world problems through technology and mathematics. Currently honing my skills
+            at the PW Institute of Innovation.
+          </p>
+          
+          <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+              <div class="card p-3 h-100">
+                <h5>My Experience</h5>
+                <p>
+                  I've worked on innovative ventures such as Dilli Delight and supported local businesses like a chai samosa
+                  and litti-chocha stall. These experiences have sharpened my skills in strategy, marketing, and content creation.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card p-3 h-100">
+                <h5>What Drives Me</h5>
+                <p>
+                  I'm deeply interested in entrepreneurship, AI, and digital creativity. I enjoy translating fresh ideas into
+                  practical solutions and discovering new ways to create value in today's dynamic tech landscape.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card p-3 h-100">
+                <h5>Beyond Work</h5>
+                <p>
+                  Outside my studies, I'm a curious learner, constantly seeking new ways to grow both personally and
+                  professionally. I enjoy spending time with friends, playing the guitar, and exploring creative projects.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="card p-3 h-100">
+                <h5>My Vision</h5>
+                <p>
+                  As I move forward in my career, I aim to contribute to the development of AI-driven solutions that make
+                  everyday life simpler, sustainable, and more enjoyable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="section-container">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      
+      <!-- Technical Skills -->
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4 fade-in">
+          <div class="card h-100 p-4 text-center">
+            <div class="skill-icon">
+              <i class="bi bi-code-square"></i>
+            </div>
+            <h4>Web Development</h4>
+            <div class="mt-3">
+              <span class="badge bg-primary m-1">HTML</span>
+              <span class="badge bg-primary m-1">CSS</span>
+              <span class="badge bg-primary m-1">JavaScript</span>
+              <span class="badge bg-primary m-1">React</span>
+              <span class="badge bg-primary m-1">Bootstrap</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 fade-in">
+          <div class="card h-100 p-4 text-center">
+            <div class="skill-icon">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h4>AI & Data Science</h4>
+            <div class="mt-3">
+              <span class="badge bg-primary m-1">Python</span>
+              <span class="badge bg-primary m-1">TensorFlow</span>
+              <span class="badge bg-primary m-1">PyTorch</span>
+              <span class="badge bg-primary m-1">Data Analysis</span>
+              <span class="badge bg-primary m-1">Machine Learning</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 fade-in">
+          <div class="card h-100 p-4 text-center">
+            <div class="skill-icon">
+              <i class="bi bi-tools"></i>
+            </div>
+            <h4>Tools & Technologies</h4>
+            <div class="mt-3">
+              <span class="badge bg-primary m-1">Git</span>
+              <span class="badge bg-primary m-1">VSCode</span>
+              <span class="badge bg-primary m-1">Jupyter</span>
+              <span class="badge bg-primary m-1">Docker</span>
+              <span class="badge bg-primary m-1">Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Professional Skills -->
+      <h3 class="text-center mb-4">Professional Skills</h3>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 fade-in">
+          <div class="card h-100 p-3 text-center">
+            <div class="skill-icon">
+              <i class="bi bi-people"></i>
+            </div>
+            <h5>Teamwork</h5>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">92%</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 fade-in">
+          <div class="card h-100 p-3 text-center">
+            <div class="skill-icon">
+              <i class="bi bi-chat-square-text"></i>
+            </div>
+            <h5>Communication</h5>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 fade-in">
+          <div class="card h-100 p-3 text-center">
+            <div class="skill-icon">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h5>Problem Solving</h5>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 fade-in">
+          <div class="card h-100 p-3 text-center">
+            <div class="skill-icon">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <h5>Time Management</h5>
+            <div class="progress mt-3">
+              <div class="progress-bar" role="progressbar" style="width: 88%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">88%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        }
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="section-container bg-light">
+    <div class="container">
+      <h2 class="section-title">My Portfolio</h2>
+      <p class="text-center lead mb-5">Check out some of my recent projects</p>
+      
+      <div class="row g-4">
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4 fade-in">
+          <div class="card h-100">
+            <img src="files/clash-royal-project-img.png" class="card-img-top" alt="Clash Royale Project">
+            <div class="card-body">
+              <h5 class="card-title">Clash Royale Cards</h5>
+              <p class="card-text">A web application I developed to showcase my web development skills. It
+                allows users to explore and interact with Clash Royale cards. Built with HTML, CSS, and
+                JavaScript.</p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="https://github.com/mayanksaini18/Clash_Royal_Cards" class="btn btn-outline-dark" target="_blank">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+                <a href="https://clash-royal-cards.vercel.app/" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-eye me-1"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        h2 {
-            font-size: 2rem;
-            color: #2b2b2e;
-            margin-bottom: 15px;
-            text-align: center;
-            font-style: italic;
-            font-family: Helvetica, sans-serif;
-        }
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4 fade-in">
+          <div class="card h-100">
+            <img src="files/music-player-project-img (1).png" class="card-img-top" alt="Music Playlist Project">
+            <div class="card-body">
+              <h5 class="card-title">My Music Playlist</h5>
+              <p class="card-text">This project is a personalized music playlist where users can
+                explore and enjoy my curated music collection. Built with JavaScript, HTML, and CSS for a
+                seamless user experience.</p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="https://github.com/mayanksaini18/my-playlist" class="btn btn-outline-dark" target="_blank">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+                <a href="https://my-playlist-mu.vercel.app/" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-eye me-1"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        /* Paragraph Styling */
-        p {
-            font-size: 1rem;
-            color: #555;
-            text-align: justify;
-            line-height: 1.8;
-            font-style: italic
-        }
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4 fade-in">
+          <div class="card h-100">
+            <img src="files/mywebsite-project-img.png" class="card-img-top" alt="Portfolio Website">
+            <div class="card-body">
+              <h5 class="card-title">Portfolio Website</h5>
+              <p class="card-text">A personal portfolio website built to showcase my skills, projects, and
+                experience. Developed using HTML, CSS, and Bootstrap for a responsive design that
+                highlights my work effectively.</p>
+              <div class="d-flex justify-content-between mt-3">
+                <a href="https://github.com/mayanksaini18/Portfolio" class="btn btn-outline-dark" target="_blank">
+                  <i class="bi bi-github me-1"></i> GitHub
+                </a>
+                <a href="https://portfolio-wheat-phi-94.vercel.app/" class="btn btn-primary" target="_blank">
+                  <i class="bi bi-eye me-1"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        section:hover {
-            box-shadow: 12px 12px 0 rgba(0, 0, 0, 0.4);
-        }
-    </style>
-    <!-- Contact Section -->
-  <div class="contact">
-        <p>Feel free to reach out to me for collaborations, ideas, or just to chat! You can connect with me through
-            email or social media platforms.</p>
-        <div class="social-icons">
+  <!-- Contact Section -->
+  <section id="contact" class="section-container">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="row">
+        <div class="col-lg-7 mx-auto">
+          <div class="contact-form card p-4 fade-in">
+            <p class="lead text-center mb-4">
+              Feel free to reach out for collaborations or just to say hello!
+            </p>
+            
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="+91XXXXXXXXXX" 
+                       pattern="^\+91\d{10}$" required>
+                <small class="form-text text-muted">Format: +91 followed by 10 digits</small>
+              </div>
+              
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
+              </div>
+              
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary px-5">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-            <a href="https://github.com/mayanksaini18 " target="_blank"><i class="bi bi-github "></i></a>
+      <!-- Contact Info -->
+      <div class="row mt-5">
+        <div class="col-md-4 mb-4 fade-in">
+          <div class="card h-100 p-4 text-center">
+            <div class="mb-3">
+              <i class="bi bi-envelope-fill text-primary" style="font-size: 2rem;"></i>
+            </div>
+            <h4>Email</h4>
+            <p><a href="mailto:mayanksaini@gmail.com" class="text-decoration-none">mayanksaini@gmail.com</a></p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 fade-in">
+          <div class="card h-100 p-4 text-center">
+            <div class="mb-3">
+              <i class="bi bi-linkedin text-primary" style="font-size: 2rem;"></i>
+            </div>
+            <h4>LinkedIn</h4>
+            <p><a href="https://www.linkedin.com/in/mayank-saini-04675b333/" class="text-decoration-none" target="_blank">Mayank Saini</a></p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 fade-in">
+          <div class="card h-100 p-4 text-center">
+            <div class="mb-3">
+              <i class="bi bi-github text-primary" style="font-size: 2rem;"></i>
+            </div>
+            <h4>GitHub</h4>
+            <p><a href="https://github.com/mayanksaini18" class="text-decoration-none" target="_blank">@mayanksaini18</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Mayank Saini</h5>
+          <p class="text-muted">AI Enthusiast | Aspiring Innovator | Problem Solver</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/mayank-saini-04675b333/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/mayanksaini18" target="_blank"><i class="bi bi-github"></i></a>
             <a href="https://x.com/_MayankSaini" target="_blank"><i class="bi bi-twitter-x"></i></a>
             <a href="mailto:mayanksaini@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
-            <a href="https://www.linkedin.com/in/mayank-saini-04675b333/" target="_blank"><i
-                    class="bi bi-linkedin"></i></a>
             <a href="https://www.instagram.com/_mayanksaini_18/" target="_blank"><i class="bi bi-instagram"></i></a>
+          </div>
         </div>
+      </div>
+      <div class="text-center mt-4">
+        <p class="small text-muted">© 2025 Mayank Saini. All rights reserved.</p>
+      </div>
     </div>
-</body>
+  </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Required script for "Select" feature -->
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    // Add smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+          
+          // Update active nav link
+          document.querySelectorAll('.navbar .nav-link').forEach(navLink => {
+            navLink.classList.remove('active');
+          });
+          this.classList.add('active');
+        }
+      });
+    });
+    
+    // Add fade-in animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      fadeElements.forEach(element => {
+        element.style.opacity = 0;
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(element);
+      });
+    });
+    
+    // Form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Thank you for your message! I will get back to you soon.');
+      this.reset();
+    });
+    
+    // Update active nav link on scroll
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.navbar .nav-link');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.pageYOffset >= sectionTop - 150) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(navLink => {
+        navLink.classList.remove('active');
+        if (navLink.getAttribute('href').substring(1) === current) {
+          navLink.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
 </html>
