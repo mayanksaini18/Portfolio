@@ -12,6 +12,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles/main.css">
+  <style>
+    /* Card hover effect */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Typing cursor for hero subtitle */
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      background-color: #333;
+      animation: blink 0.7s infinite;
+      margin-left: 3px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Progress bar animation */
+    .progress-bar {
+      width: 0;
+      transition: width 1.5s ease-in-out;
+    }
+    #form-message {
+      display: none; /* Hidden by default */
+    }
+  </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
   <!-- Navbar -->
@@ -84,13 +115,15 @@
     <div class="container">
       <h1 class="section-title">About Me</h1>
       <div class="row align-items-center">
-       
+        <div class="col-lg-5 fade-in">
+          <!-- <img src="files/blue-hoodie-in-room.jpg" alt="About Mayank Saini" class="img-fluid rounded shadow-sm"> -->
+        </div>
         <div class="col-lg-7 mt-4 mt-lg-0 fade-in">
           <h2>Who I Am?</h2>
           <p class="lead">
-            Hi, I'm Mayank Saini, a passionate tech student pursuing BSc in Artificial Intelligence and Data Science at
-            IIT Patna. I love solving real-world problems through technology and mathematics. Currently honing my skills
-            at the PW Institute of Innovation.
+            Hi, I’m Mayank Saini, a passionate tech student pursuing BSc in Artificial Intelligence and Data Science at
+            IIT Patna. I love solving real-world problems through technology and mathematics. Currently honing my
+            skills at the PW Institute of Innovation.
           </p>
           
           <div class="row mt-4">
@@ -98,8 +131,9 @@
               <div class="card p-3 h-100">
                 <h5>My Experience</h5>
                 <p>
-                  I've worked on innovative ventures such as Dilli Delight and supported local businesses like a chai samosa
-                  and litti-chocha stall. These experiences have sharpened my skills in strategy, marketing, and content creation.
+                  I've worked on innovative ventures and supported local businesses, sharpening my skills in strategy,
+                  marketing, and content creation. These experiences taught me to think critically and approach
+                  challenges creatively.
                 </p>
               </div>
             </div>
@@ -107,8 +141,8 @@
               <div class="card p-3 h-100">
                 <h5>What Drives Me</h5>
                 <p>
-                  I'm deeply interested in entrepreneurship, AI, and digital creativity. I enjoy translating fresh ideas into
-                  practical solutions and discovering new ways to create value in today's dynamic tech landscape.
+                  I'm deeply interested in entrepreneurship, AI, and digital creativity. I enjoy translating fresh
+                  ideas into practical solutions and building businesses that merge technology with everyday life.
                 </p>
               </div>
             </div>
@@ -116,8 +150,8 @@
               <div class="card p-3 h-100">
                 <h5>Beyond Work</h5>
                 <p>
-                  Outside my studies, I'm a curious learner, constantly seeking new ways to grow both personally and
-                  professionally. I enjoy spending time with friends, playing the guitar, and exploring creative projects.
+                  I'm a curious learner who values collaboration and storytelling. I enjoy spending time with friends, playing the guitar, and
+                  exploring creative projects that merge technology and art.
                 </p>
               </div>
             </div>
@@ -153,8 +187,9 @@
               <span class="badge bg-primary m-1">HTML</span>
               <span class="badge bg-primary m-1">CSS</span>
               <span class="badge bg-primary m-1">JavaScript</span>
-              <span class="badge bg-primary m-1">React</span>
               <span class="badge bg-primary m-1">Bootstrap</span>
+              <span class="badge bg-primary m-1">Node.js</span>
+              <span class="badge bg-primary m-1">React</span>
             </div>
           </div>
         </div>
@@ -167,6 +202,7 @@
             <h4>AI & Data Science</h4>
             <div class="mt-3">
               <span class="badge bg-primary m-1">Python</span>
+              <span class="badge bg-primary m-1">C</span>
               <span class="badge bg-primary m-1">TensorFlow</span>
               <span class="badge bg-primary m-1">PyTorch</span>
               <span class="badge bg-primary m-1">Data Analysis</span>
@@ -183,7 +219,7 @@
             <h4>Tools & Technologies</h4>
             <div class="mt-3">
               <span class="badge bg-primary m-1">Git</span>
-              <span class="badge bg-primary m-1">VSCode</span>
+              <span class="badge bg-primary m-1">VS Code</span>
               <span class="badge bg-primary m-1">Jupyter</span>
               <span class="badge bg-primary m-1">Docker</span>
               <span class="badge bg-primary m-1">Linux</span>
